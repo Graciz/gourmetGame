@@ -1,0 +1,28 @@
+package goumertGraci.model;
+
+public class Feature {
+
+	private String name;
+	private Feature dadFeature;
+	
+	public Feature (String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public boolean hasDadFeature()	{
+	
+	if(this.dadFeature != null) {
+		return true;
+	}
+	return false;
+	}
+
+}

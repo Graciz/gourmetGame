@@ -1,0 +1,15 @@
+1576114886139	Rename type 'plate'
+1576115107766	Rename type 'Features'
+1576149092286	Rename type 'Manipuladotr'
+1576194482011	Delete element
+1576201640795	Delete element
+1576203537812	Delete element
+1576203873107	Rename type 'Plate'
+1576204732940	Rename method 'getValor'
+1576204742301	Rename method 'getValUE'
+1576205142430	Rename compilation unit 'Snippet.java'
+1576205171498	Rename field 'saltyDishes'
+1576205184359	Rename field 'sweetDishes'
+1576205299785	Rename method 'DisheIsMassa'
+1576205859786	Rename enum constant 'MASSA'
+1576205980536	Rename type 'EMassaOther'

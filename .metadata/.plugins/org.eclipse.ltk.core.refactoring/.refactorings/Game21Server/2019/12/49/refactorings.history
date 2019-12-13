@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from project &apos;Game21Server&apos;&#x0D;&#x0A;- Original project: &apos;Game21Server&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     DisparoThread.java&#x0D;&#x0A;     Jogador.java&#x0D;&#x0A;     ServidorJogo.java&#x0D;&#x0A;     Visao.java" description="Delete elements" element1="/src&lt;{Jogador.java" element2="/src&lt;{ServidorJogo.java" element3="/src&lt;{DisparoThread.java" element4="/src&lt;{Visao.java" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1575337322441" subPackages="false" version="1.0"/>
+</session>

@@ -1,0 +1,16 @@
+package Enums;
+
+public enum ESimNao {
+
+	SIM(0), NAO(1);
+	
+	private final Long value;
+	
+	ESimNao(Long value){
+        this.value = value;
+    }
+    public Long getValor(){
+        return value;
+    }
+	
+}

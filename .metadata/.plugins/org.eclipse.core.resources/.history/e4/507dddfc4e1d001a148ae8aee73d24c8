@@ -1,0 +1,21 @@
+package goumertGraci.model;
+
+public class Plate {
+
+	private String name;
+	private String feature;
+
+	public Plate(String name, String feature) {
+		this.name = name;
+		this.feature = feature;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+}

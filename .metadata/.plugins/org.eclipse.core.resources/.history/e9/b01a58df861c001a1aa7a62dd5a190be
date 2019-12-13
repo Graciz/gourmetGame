@@ -1,0 +1,32 @@
+package goumertGraci.model;
+
+public class Plate {
+	
+	private String name;
+	
+	private Feature identifyFeature;
+
+	
+	public Plate(String name, Feature mainFeature) {
+		super();
+		this.name = name;
+		this.identifyFeature = mainFeature;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Feature getMainFeature() {
+		return identifyFeature;
+	}
+
+	public void setMainFeature(Feature mainFeature) {
+		this.identifyFeature = mainFeature;
+	}
+	
+}

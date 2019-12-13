@@ -1,0 +1,36 @@
+package goumertGraci.view;
+
+import javax.swing.JOptionPane;
+
+import Enums.ESimNao;
+import goumertGraci.model.KnowledgeBase;
+
+public class View {
+
+	public static void main(String args[]) {
+		
+		KnowledgeBase knowledgeBase = new KnowledgeBase();
+		knowledgeBase.initialize();
+				
+		
+		
+		if(DisheIsMassa() == ESimNao.SIM.getValue()) {
+			
+		}
+
+		
+	/*
+
+		int numero1;
+		String numero2;
+		int num1, num2, total;
+		
+		numero2 = JOptionPane.showInputDialog("Digite o 2º numero:");
+		
+//		num2 = Integer.parseInt(numero2);
+//		total = num1 + num2;
+//		JOptionPane.showMessageDialog(null, "A soma dos numeros é" + total, "Resultado total",
+//				JOptionPane.PLAIN_MESSAGE);
+		System.exit(0);*/
+	}
+}

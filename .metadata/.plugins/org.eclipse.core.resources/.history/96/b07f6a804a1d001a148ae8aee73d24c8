@@ -1,0 +1,19 @@
+package goumertGraci.service;
+
+public class KnowledgeBank {
+	
+	
+	
+	
+	
+	/// Deverá recarregar as características pais
+	/// Deverá ter método que busca pela a próxima caracterítica Filha
+	/// Deverá busca pelo o Prato a partir da caracterísca corrente 
+	
+
+
+	public initConfigurations() {
+		
+	}
+	
+}

@@ -1,0 +1,25 @@
+package goumertGraci.model;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class KnowledgeBase {
+	
+	private List<Dishes> sweetDishes;
+	private List<Dishes> saltyDishes;
+	
+	public KnowledgeBase() {
+		this.sweetDishes = new ArrayList<Dishes>();
+		this.saltyDishes = new ArrayList<Dishes>();
+	}
+
+	public void initialize() {
+		this.sweetDishes = Arrays.asList(new Dishes(null,"Bolo de Chocolate"));  
+		this.saltyDishes =  Arrays.asList(new Dishes("massa", "Lasanha"));
+	}
+	
+	
+	
+
+}

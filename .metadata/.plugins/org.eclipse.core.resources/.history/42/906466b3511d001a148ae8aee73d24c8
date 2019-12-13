@@ -1,0 +1,17 @@
+package Enums;
+
+public enum ESimNao {
+
+	SIM(0), NAO(1);
+
+	private final int value;
+
+	ESimNao(int value) {
+		this.value = value;
+	}
+
+	public int getValor() {
+		return value;
+	}
+
+}

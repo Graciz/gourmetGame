@@ -1,0 +1,14 @@
+package goumertGraci.model;
+
+import java.util.List;
+
+public class KnowledgeBase {
+	
+	List<Plate> sweetDishes;
+	List<Plate> saltyDishes;
+	
+	
+	
+	
+
+}

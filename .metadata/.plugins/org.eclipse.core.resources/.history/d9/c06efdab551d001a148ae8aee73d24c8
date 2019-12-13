@@ -1,0 +1,50 @@
+package goumertGraci.view;
+
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
+import Enums.EPastaOther;
+import Enums.ESimNao;
+import goumertGraci.model.Dishes;
+import goumertGraci.model.KnowledgeBase;
+
+public class View {
+
+	public static void main(String args[]) {
+
+		KnowledgeBase knowledgeBase = new KnowledgeBase();
+		knowledgeBase.initialize();
+
+		// VER COMO MANTER ATÉ AQUI //
+		EPastaOther type = getTypeDishe();
+		List<Dishes> roundDishes = knowledgeBase.chooseList(type);
+
+	}
+
+	private static EPastaOther getTypeDishe() {
+		int answer = JOptionPane.showConfirmDialog(null, "O prato que você pensou é massa?", "Diga-me",
+				JOptionPane.YES_NO_OPTION);
+
+		if (answer == ESimNao.SIM.getValue()) {
+			return EPastaOther.PASTA;
+		}
+		return EPastaOther.OTHER;
+	}
+	
+	private static ESimNao startGame() {
+		JOptionPane.showMessageDialog(null, "Pense em um prato que gosta. Vamos Jogar?", "Jogo Goumert",
+				JOptionPane.YES_NO_OPTION);
+	}
+
+	/*
+	 * 
+	 * int numero1; String numero2; int num1, num2, total;
+	 * 
+	 * numero2 = JOptionPane.showInputDialog("Digite o 2º numero:");
+	 * 
+	 * // num2 = Integer.parseInt(numero2); // total = num1 + num2; //
+	 * JOptionPane.showMessageDialog(null, "A soma dos numeros é" + total,
+	 * "Resultado total", // JOptionPane.PLAIN_MESSAGE); System.exit(0);
+	 */
+}
