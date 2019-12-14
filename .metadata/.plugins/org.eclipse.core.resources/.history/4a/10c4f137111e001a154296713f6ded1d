@@ -1,0 +1,43 @@
+package goumertGraci.model;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import Enums.EPastaOther;
+
+public class KnowledgeBase {
+
+	private List<Dishes> otherDishes;
+	private List<Dishes> pastaDishes;
+	private EPastaOther currentType;
+
+	public KnowledgeBase() {
+		this.otherDishes = new ArrayList<Dishes>();
+		this.pastaDishes = new ArrayList<Dishes>();
+	}
+
+	public void initialize() {
+		this.otherDishes = Arrays.asList(new Dishes(null, "Bolo de Chocolate"));
+		this.pastaDishes = Arrays.asList(new Dishes("massa", "Lasanha"));
+	}
+
+	public EPastaOther getCurrentType() {
+		return currentType;
+	}
+
+	public void setCurrentType(EPastaOther currentType) {
+		this.currentType = currentType;
+	}
+
+	public List<Dishes> getActiveList() {
+		return this.currentType == EPastaOther.PASTA ? this.pastaDishes:this.otherDishes;
+	}
+	
+	
+	
+	public boolean hasNextFeature() {
+		if( currentType
+	}
+
+}

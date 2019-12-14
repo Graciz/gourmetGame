@@ -6,24 +6,38 @@ import javax.swing.JOptionPane;
 
 import Enums.EPastaOther;
 import Enums.ESimNao;
-import goumertGraci.model.Dishes;
+import goumertGraci.model.Dish;
 import goumertGraci.model.KnowledgeBase;
 
 public class View {
 
 	public static void main(String args[]) {
 
+		List<Dish> roundDishes;
 		KnowledgeBase knowledgeBase = new KnowledgeBase();
 		knowledgeBase.initialize();
+		int hitThePlate;
 
 		while (continueGame() == ESimNao.SIM.getValue()) {
-			EPastaOther type = getTypeDishe();
-			List<Dishes> roundDishes = knowledgeBase.chooseList(type);
+
+			knowledgeBase.setCurrentType(getTypeDishe());
+			roundDishes = knowledgeBase.getActiveList();
+
+			for (Dish dish : roundDishes) { //
+				if (knowledgeBase.hasNextFeature(dish)) {
+
+				} else {
+					hitThePlate = askAboutItsDish(dish);
+					/// Se acertou mostrar mensagem de sucesso
+					// senão acertou pergunta qual prato e salva um novo prato e recomeça o jogo.
+				}
+			}
 
 		}
-		
+
 	}
 
+	/* Pode criar uma classee de dos comandos */
 	private static EPastaOther getTypeDishe() {
 		int answer = JOptionPane.showConfirmDialog(null, "O prato que você pensou é massa?", "Diga-me",
 				JOptionPane.YES_NO_OPTION);
@@ -33,14 +47,24 @@ public class View {
 		}
 		return EPastaOther.OTHER;
 	}
-	
+
 	private static int continueGame() {
 		int answer = JOptionPane.showConfirmDialog(null, "Pense em um prato que gosta. Vamos Jogar?", "Jogo Goumert",
 				JOptionPane.YES_NO_OPTION);
-		
+
 		return answer;
 	}
 
+	private static int askAboutItsDish(Dish dish) {
+		int answer = JOptionPane.showConfirmDialog(null, "O prato que você pensou é" + dish.getName() + " ?", "Diga-me",
+				JOptionPane.YES_NO_OPTION);
+
+		return answer;
+	}
+
+	private static int sucessInFindTheDish() {
+		return 0;
+	}
 	/*
 	 * 
 	 * int numero1; String numero2; int num1, num2, total;

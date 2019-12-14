@@ -1,0 +1,61 @@
+package goumertGraci.model;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import Enums.EPastaOther;
+
+public class KnowledgeBase {
+
+	private List<Dishe> otherDishes;
+	private List<Dishe> pastaDishes;
+	private EPastaOther currentType;
+
+	public KnowledgeBase() {
+		this.otherDishes = new ArrayList<Dishe>();
+		this.pastaDishes = new ArrayList<Dishe>();
+	}
+
+	public void initialize() {
+		this.otherDishes = Arrays.asList(new Dishe(null, "Bolo de Chocolate"));
+		this.pastaDishes = Arrays.asList(new Dishe("massa", "Lasanha"));
+	}
+
+	public EPastaOther getCurrentType() {
+		return currentType;
+	}
+
+	public void setCurrentType(EPastaOther currentType) {
+		this.currentType = currentType;
+	}
+
+	public List<Dishe> getActiveList() {
+		return this.currentType == EPastaOther.PASTA ? this.pastaDishes:this.otherDishes;
+	}
+
+	private boolean hasNextFeature(List<Dishe> currentList, Dishe currentDish) {
+		int position = currentList.indexOf(currentDish), //
+				nextposition = position++;
+
+		if (nextposition != 0 && nextposition < currentList.size()) {
+			Dishe nextElement = currentList.get(nextposition);
+
+			if (nextElement.getFeature() != null) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+	
+	public boolean hasNextFeature(Dishe currentDish) {
+		
+		if(this.currentType == EPastaOther.PASTA) {
+			return this.hasNextFeature(this.pastaDishes ,currentDish);
+		} 
+		
+		return  this.hasNextFeature(this.otherDishes ,currentDish);
+	}
+
+}
